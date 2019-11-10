@@ -8,7 +8,7 @@ namespace WebShopPatterns.Factories
     {
         public User GetUser(string type)
         {
-            User nullUser = new NullUser();
+            User nullUser = NullUser.Instance;
 
             switch(type)
             {
