@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShopPatterns", "WebShopPatterns\WebShopPatterns.csproj", "{4BEAA713-C133-4650-865A-B0EFE310B651}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BEAA713-C133-4650-865A-B0EFE310B651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BEAA713-C133-4650-865A-B0EFE310B651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BEAA713-C133-4650-865A-B0EFE310B651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BEAA713-C133-4650-865A-B0EFE310B651}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F223E8D-C4E0-44EA-8D6F-A788273A9286}
+	EndGlobalSection
+EndGlobal
