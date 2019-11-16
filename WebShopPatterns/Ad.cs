@@ -5,20 +5,8 @@ using WebShopPatterns.Composite;
 
 namespace WebShopPatterns
 {
-    class Ad : IItem
+    public class Ad : IItem
     {
-        public Ad(string name, string description, decimal price, int rating)
-        {
-            Name = name;
-            Description = description;
-            Price = price;
-            Rating = rating;
-        }
-
-        public Ad()
-        {
-            
-        }
 
         public string Name { get; set; }
         public string Description { get; set; }
