@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using WebShopPatterns.Builder;
 using WebShopPatterns.Composite;
 using WebShopPatterns.Factories;
@@ -13,6 +14,21 @@ namespace WebShopPatterns
             Ad ad2 = new Ad() { Price = 23 };
             Ad ad3 = new Ad() { Price = 400 };
             Ad ad4 = new Ad() { Price = 1240 };
+            
+            var basicBuilder = new BasicAdBuilder();
+            
+            var factory = new AdFactory();
+            var builders = new List<AdBuilder>
+            {
+                basicBuilder
+            };
+            
+            foreach (var b in builders)
+            {
+                var a = factory.Build(b);
+              //  Console.WriteLine(a.Price);
+                
+            }
             
             UserFactory userFactory = new UserFactory();
             User user = userFactory.GetUser("Customer");
@@ -31,6 +47,7 @@ namespace WebShopPatterns
             user.Order();
 
             Console.ReadLine();
+            
         }
     }
 }
