@@ -1,4 +1,5 @@
 ﻿using System;
+using WebShopPatterns.Builder;
 using WebShopPatterns.Composite;
 using WebShopPatterns.Factories;
 
@@ -12,7 +13,7 @@ namespace WebShopPatterns
             Ad ad2 = new Ad() { Price = 23 };
             Ad ad3 = new Ad() { Price = 400 };
             Ad ad4 = new Ad() { Price = 1240 };
-
+            
             UserFactory userFactory = new UserFactory();
             User user = userFactory.GetUser("Customer");
 
