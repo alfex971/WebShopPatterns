@@ -15,21 +15,6 @@ namespace WebShopPatterns
             Ad ad3 = new Ad() { Price = 400 };
             Ad ad4 = new Ad() { Price = 1240 };
             
-            var basicBuilder = new BasicAdBuilder();
-            
-            var factory = new AdFactory();
-            var builders = new List<AdBuilder>
-            {
-                basicBuilder
-            };
-            
-            foreach (var b in builders)
-            {
-                var a = factory.Build(b);
-              //  Console.WriteLine(a.Price);
-                
-            }
-            
             UserFactory userFactory = new UserFactory();
             User user = userFactory.GetUser("Customer");
 
