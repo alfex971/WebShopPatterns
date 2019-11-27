@@ -26,12 +26,12 @@ namespace WebShopPatterns
             foreach (var b in builders)
             {
                 var a = factory.Build(b);
-              //  Console.WriteLine(a.Price);
-                
+                Console.WriteLine(a.GetPrice());
+
             }
-            
+
             UserFactory userFactory = new UserFactory();
-            User user = userFactory.GetUser("Customer");
+            User user = userFactory.GetUser("Customer", "martin@gmail.com");
 
             Basket basket = new Basket();
             basket.AddAd(ad2);

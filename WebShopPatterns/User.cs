@@ -7,7 +7,7 @@ namespace WebShopPatterns
 {
     abstract class User
     {
-        public string FristName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
@@ -15,6 +15,11 @@ namespace WebShopPatterns
         public string Country { get; set; }
         public string PostalCode { get; set; }
         public IItem Item { get; set; }
+
+        public User(string email)
+        {
+            this.Email = email;
+        }
 
         public abstract void Order();
     }
