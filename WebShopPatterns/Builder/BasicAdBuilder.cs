@@ -1,7 +1,8 @@
 ﻿namespace WebShopPatterns.Builder
 {
-    public class BasicAdBuilder : AdBuilder
+    public class BasicAdBuilder /*: AdBuilder*/
     {
+        /*
         public override void SetName()
         {
             _ad.Name = "";
@@ -21,5 +22,6 @@
         {
             _ad.Rating = 2;
         }
+        */
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace WebShopPatterns.Builder
+﻿using WebShopPatterns.Composite;
+
+namespace WebShopPatterns.Builder
 {
-    public abstract class AdBuilder
+    public abstract class AdBuilder : IItem
     {
+        /*
         protected readonly Ad _ad = new Ad();
         public abstract void SetName();
         public abstract void SetDescription();
@@ -13,7 +16,24 @@
         {
             return _ad;
         }
+    */
+        protected Ad ad;
 
+        // Gets sandwich instance
+        public Ad Ad
+        {
+            get { return ad; }
+        }
+
+        // Abstract build methods
+        public abstract void AddName(string name);
+        public abstract void AddDescription(string description);
+        public abstract void AddPrice(string price);
+        public abstract void AddRating(string rating);
+        public decimal GetPrice()
+        {
+            throw new System.NotImplementedException();
+        }
     }
-    /*test*/
+    
 }
