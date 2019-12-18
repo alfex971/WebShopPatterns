@@ -32,8 +32,9 @@ namespace WebShopPatterns.Builder
         public abstract void AddRating(string rating);
         public decimal GetPrice()
         {
-            throw new System.NotImplementedException();
+            return 1;
         }
+        
     }
     
 }
