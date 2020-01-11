@@ -13,8 +13,6 @@
             ad["name"] = name;
         }
 
-        
-
         public override void AddDescription(string description)
         {
             ad["description"] = description;
@@ -28,6 +26,11 @@
         public override void AddRating(string rating)
         {
             ad["rating"] = rating;
+        }
+
+        public override Ad GetAd()
+        {
+            return ad;
         }
     }
 }

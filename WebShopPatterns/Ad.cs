@@ -50,7 +50,7 @@ namespace WebShopPatterns
 
         public decimal GetPrice()
         {
-            throw new NotImplementedException();
+            return decimal.Parse(_ingredients["price"]);
         }
     }
     

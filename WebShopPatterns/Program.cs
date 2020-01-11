@@ -33,48 +33,52 @@ namespace WebShopPatterns
             }
             */
 
-            AdBuilder ad1, ad2,ad3,ad4;
+            AdBuilder adBuilder1, adBuilder2, adBuilder3, adBuilder4;
             AssemblyLine assemblyLine = new AssemblyLine();
-            
-            ad1 = new AdFactory();
-            assemblyLine.Assemble(ad1);
-            ad1.AddName("This is the name");
-            ad1.AddDescription("this is the description");
-            ad1.AddPrice("123");
-            ad1.AddRating("3.4");
-            ad1.Ad.Show();
-            
-            ad2 = new AdFactory();
-            assemblyLine.Assemble(ad2);
-            ad2.AddName("This is the name");
-            ad2.AddDescription("this is the description");
-            ad2.AddPrice("123");
-            ad2.AddRating("3.4");
-            ad2.Ad.Show();
 
-            ad3 = new AdFactory();
-            assemblyLine.Assemble(ad3);
-            ad3.AddName("This is the name");
-            ad3.AddDescription("this is the description");
-            ad3.AddPrice("123");
-            ad3.AddRating("3.4");
-            ad3.Ad.Show();
-            
-            ad4 = new AdFactory();
-            assemblyLine.Assemble(ad4);
-            ad4.AddName("This is the name");
-            ad4.AddDescription("this is the description");
-            ad4.AddPrice("123");
-            ad4.AddRating("444");
-            ad4.Ad.Show();
-            
-            
-            
+            adBuilder1 = new AdFactory();
+            assemblyLine.Assemble(adBuilder1);
+            adBuilder1.AddName("This is the name");
+            adBuilder1.AddDescription("this is the description");
+            adBuilder1.AddPrice("123");
+            adBuilder1.AddRating("3.4");
+            adBuilder1.Ad.Show();
+            var ad1 = adBuilder1.GetAd();
+
+            adBuilder2 = new AdFactory();
+            assemblyLine.Assemble(adBuilder2);
+            adBuilder2.AddName("This is the name");
+            adBuilder2.AddDescription("this is the description");
+            adBuilder2.AddPrice("123");
+            adBuilder2.AddRating("3.4");
+            adBuilder2.Ad.Show();
+            var ad2 = adBuilder2.GetAd();
+
+            adBuilder3 = new AdFactory();
+            assemblyLine.Assemble(adBuilder3);
+            adBuilder3.AddName("This is the name");
+            adBuilder3.AddDescription("this is the description");
+            adBuilder3.AddPrice("123");
+            adBuilder3.AddRating("3.4");
+            adBuilder3.Ad.Show();
+            var ad3 = adBuilder3.GetAd();
+
+            adBuilder4 = new AdFactory();
+            assemblyLine.Assemble(adBuilder4);
+            adBuilder4.AddDescription("this is the description");
+            adBuilder4.AddName("This is the name");
+            adBuilder4.AddPrice("123");
+            adBuilder4.AddRating("444");
+            adBuilder4.Ad.Show();
+            var ad4 = adBuilder4.GetAd();
+
+
+
 
             UserFactory userFactory = new UserFactory();
             User user = userFactory.GetUser("Customer", "martin@gmail.com");
 
-            
+
             Basket basket = new Basket();
             basket.AddAd(ad2);
             basket.AddAd(ad4);
@@ -82,14 +86,14 @@ namespace WebShopPatterns
             Basket basket2 = new Basket();
             basket.AddAd(ad1);
             basket.AddAd(ad3);
-            
+
             basket.AddAd(basket2);
 
             user.Item = basket;
             user.Order();
 
             Console.ReadLine();
-            
+
         }
     }
 }

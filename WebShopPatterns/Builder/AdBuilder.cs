@@ -2,7 +2,7 @@
 
 namespace WebShopPatterns.Builder
 {
-    public abstract class AdBuilder : IItem
+    public abstract class AdBuilder
     {
         /*
         protected readonly Ad _ad = new Ad();
@@ -30,11 +30,7 @@ namespace WebShopPatterns.Builder
         public abstract void AddDescription(string description);
         public abstract void AddPrice(string price);
         public abstract void AddRating(string rating);
-        public decimal GetPrice()
-        {
-            return 1;
-        }
-        
+        public abstract Ad GetAd();        
     }
     
 }
